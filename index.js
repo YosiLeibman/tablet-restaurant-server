@@ -25,4 +25,4 @@ app.get('/', (req, res) => {
 })
 
 // run the server
-app.listen(1000, () => console.log('hey from prot 1000'))
+app.listen(80, () => console.log('hey from port 80'))
