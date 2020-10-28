@@ -19,9 +19,12 @@ app.use(express.json())
 app.use('/orders', ordersRouteFile)
 app.use('/waiters', waitersRouteFile)
 
+// public folder
+app.use(express.static('dist'))
+
 // root route
 app.get('/', (req, res) => {
-	res.send('welcome to my app =)')
+	res.sendFile(__dirname + '/dist/index.html')
 })
 
 // run the server
